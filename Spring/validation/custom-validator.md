@@ -78,8 +78,8 @@ public class IpAddressValidator implements ConstraintValidator<IpAddress, String
    private IpVersion version;
 
     @Override
-    public void initialize(PublicIpv4Address ipValidator) {
-        version = ipValidator.version();
+    public void initialize(IpAddress ipAddress) {
+        version = ipAddress.version();
     }
 
     @Override
